@@ -28,12 +28,17 @@
     <h1>パスワード</h1>
     <div id="randomNumber"></div>
     <button onclick="openSecondTab()">パスワード入力</button>
-
+    <h1>
+        <font color="red">
+            パスワードをスクリーンショットなどで保存してください。
+        </font>
+    </h1>
+        
     <script>
         let savedCondition = '開錠';
 
         function generateRandomNumber() {
-            checkCondition()
+            // checkCondition()
             if(savedCondition=='施錠'){
                 document.write(savedCondition);
             } else {
@@ -44,10 +49,12 @@
                         numbers.push(number);
                     }
                 }
-                document.write(savedCondition);
+                num = numbers.join('');
+               
+                return num;
             }
 
-            return numbers.join('');
+            
         }
 
         function saveNumber(number) {
